@@ -1,0 +1,30 @@
+
+    <main>
+        <section class="crypto-market">
+            <h1><span>Crypto</span> Trade</h1>
+            <div class="offer-list">
+        {{#if crypto}}
+        {{#each crypto}}
+        <div class="coin">
+                    <div class="coin-img">
+                        <img src="{{image}}">
+                    </div>
+                    <div class="coin-info">
+                        <h1>{{name}}</h1>
+                        <p><span>Price: </span>{{price}}</p>
+                        <p><span>Payment: </span>{{paymentMethod}}</p>
+                    </div>
+
+                    <a href="/crypto/details/{{_id}}" class="btn-details">Details</a>
+        {{/each}}
+
+        {{else}}
+
+            <div class="no-offer">
+                <p>There are no crypto offers found!</p>
+            </div> 
+        {{/if}}
+               
+    </div>
+        </section>
+    </main>
