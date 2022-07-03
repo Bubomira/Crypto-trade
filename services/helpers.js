@@ -8,3 +8,4 @@ module.exports.getUsers = async(peopleId,newId)=>{
    result.push(await User.findOne({_id:newId}))
    return result
 }
+
